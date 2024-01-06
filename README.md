@@ -1,6 +1,7 @@
 # curly_bits
 
-A struct-enhanced, macro-powered crate, that replaces the {{curly_bits}} in a template file with the desired text content.
+A struct-enhanced, macro-powered crate, that replaces the {{curly_bits}} in a template file with the desired text content.<br>
+(This crate is for personal use - it's really, really simple... but it does the job!)
 
 ---
 *Motivation*
@@ -14,7 +15,7 @@ I wanted a simple **file templating library** that could:
 ---
 *Result*
 
-To use this crate, call the `load_curly_bits!` macro, pointed to a template file path.
+To use this crate, call the `load_curly_bits!` macro, pointed to a template file path. <br>
 Then, it's as easy as working with a `struct` full of `String` fields, and printing it.
 
 

@@ -4,7 +4,9 @@ use curly_bits::load_curly_bits;
 load_curly_bits!("tests/simple.txt");
 
 fn main() {
-    let data : SimpleTemplate = SimpleTemplate{ greeting : "Hey".to_string(), name : "Dude".to_string() };
+    let mut data : SimpleTemplate = SimpleTemplate::default();
+    data.greeting = "Hey".to_string();
+    data.name = "Dude".to_string();
 
     println!("#### template ({})\n{}\n", data.template_file(), data.template());
     println!("#### struct\n{:#?}\n", data);

@@ -8,10 +8,11 @@ extern crate quote;
 use quote::quote;
 use proc_macro::TokenStream;
 use convert_case::{Case, Casing};
-use std::fs;
 use std::path::PathBuf;
-use std::collections::HashMap;
 // use std::str::FromStr;
+use std::collections::HashMap;
+use std::fs;
+
 
 #[proc_macro]
 pub fn load_curly_bits(input: TokenStream) -> TokenStream {
@@ -93,9 +94,6 @@ pub fn load_curly_bits(input: TokenStream) -> TokenStream {
 
     // assemble the pieces into the final struct definition.
     let gen = quote! {
-        use std::collections::HashMap;
-        use std::fs;
-
         #[derive(Debug,Clone)]
         pub struct #new_struct {
             #(#struct_fields)*

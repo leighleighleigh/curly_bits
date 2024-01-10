@@ -1,3 +1,6 @@
+use std::collections::HashMap;
+use std::fs;
+
 extern crate curly_bits;
 use curly_bits::load_curly_bits;
 
